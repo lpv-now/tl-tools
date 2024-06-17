@@ -9,7 +9,7 @@
     <script>
         async function sendNumber() {
             const number = document.getElementById('numberInput').value;
-            const url = `https://api.ticketline.pt/tickets/${number}?token=5E0C35F4226D4957A6BE3B81A7A0E1A0`;
+            const url = `https://api.ticketline.pt/tickets/GetTicketByBarcode?token=5E0C35F4226D4957A6BE3B81A7A0E1A0&code=${number}`;
             try {
                 const response = await fetch(url, {
                     method: 'GET'
